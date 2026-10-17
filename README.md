@@ -2,10 +2,18 @@
 
 Nooklet is the best place for small forums, for macOS and Windows.
 
-The app checks GitHub Releases when it opens. When an interface update is available, click Install update in Nooklet. Sign-in and local data stay in the app's existing storage.
+## App updates
 
-## Source and release workflow
+Nooklet checks the public releases when it opens. When a newer interface bundle is available, click **Install update**. The update keeps sign-in and saved local forums in the app's existing storage.
 
-The public source archive is nooklet-source.zip. GitHub Actions builds nooklet-ui.zip and a SHA-256 checksum when a version tag beginning with v is pushed. The GitHub Actions secrets VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY must be configured privately before publishing future releases.
+The updater changes the interface bundle. Changes to the Electron desktop runtime still need a new app download.
 
-Interface updates do not update Electron itself; changes to the desktop runtime need a new app package.
+## Publish an interface update
+
+1. Build the interface on the developer Mac using the private `.env` file.
+2. Refresh `nooklet-source.zip` with the source and compiled `dist` folder. Do not include `.env`.
+3. Commit the updated archive and create a version tag beginning with `v`.
+
+GitHub Actions packages the interface, creates a SHA-256 checksum, and attaches both to that release.
+
+The public source archive and downloads are on [GitHub Releases](https://github.com/krgkonekpro04-cpu/Nooklet/releases).
