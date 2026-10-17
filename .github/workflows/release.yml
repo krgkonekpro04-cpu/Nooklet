@@ -16,30 +16,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Unpack Nooklet source
         run: mkdir nooklet-source && unzip -q nooklet-source.zip -d nooklet-source
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: nooklet-source/package-lock.json
-      - name: Install dependencies
-        run: npm ci
-        working-directory: nooklet-source
-      - name: Check private release settings
-        run: |
-          test -n "$VITE_SUPABASE_URL" || (echo "Set the VITE_SUPABASE_URL Actions secret." && exit 1)
-          test -n "$VITE_SUPABASE_ANON_KEY" || (echo "Set the VITE_SUPABASE_ANON_KEY Actions secret." && exit 1)
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-      - name: Build interface
-        run: npm run build
-        working-directory: nooklet-source
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
       - name: Package and checksum interface
         run: |
+          test -f nooklet-source/dist/index.html
           cd nooklet-source/dist
           zip -qr ../../nooklet-ui.zip .
           cd ../..
