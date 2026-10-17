@@ -1,3 +1,6 @@
+#VERY IMPORTANT READ OR YOU CANT DOWNLOAD THIS APP
+
+
 # Nooklet
 
 Nooklet is the best place for small forums, for macOS and Windows.
