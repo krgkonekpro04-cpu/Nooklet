@@ -11,9 +11,9 @@ Download the build for your computer from [GitHub Releases](https://github.com/k
 1. Download [Nooklet for Mac](https://github.com/krgkonekpro04-cpu/Nooklet/releases/download/v0.2.0-alpha.10/Nooklet-darwin-arm64-0.2.0-alpha.10.zip). This build is for Apple silicon Macs (M1/M2/M3/M4).
 2. In Finder, open Downloads and double-click the ZIP to extract it.
 3. Drag Nooklet.app into Applications.
-4. Control-click Nooklet.app, choose Open, then choose Open again if macOS asks you to confirm. Launch it from Applications afterward.
+4. If macOS says it cannot verify the developer, only continue if you trust this download: try opening it once, then go to Apple menu > System Settings > Privacy & Security and select Open Anyway for Nooklet. Confirm the prompt, then launch it from Applications. For Apple’s instructions, see https://support.apple.com/en-us/102445.
 
-If macOS still says Nooklet is damaged or refuses to open it, stop and contact the developer for a signed release. Do not run Terminal commands or disable Gatekeeper.
+If the alert specifically says “Nooklet is damaged and can’t be opened”, stop. That is different from an unidentified-developer warning; this unsigned alpha has no safe GUI override for that alert. A new, correctly signed and notarized build is needed. Do not run Terminal commands or disable Gatekeeper.
 
 ### Windows
 
