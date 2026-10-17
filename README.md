@@ -4,27 +4,22 @@ Nooklet is the best place for small forums, for macOS and Windows.
 
 ## Download and launch Nooklet
 
-Download the build for your computer from [GitHub Releases](https://github.com/krgkonekpro04-cpu/Nooklet/releases). The current downloads are unsigned alpha builds, so macOS or Windows may show a security warning the first time you open Nooklet.
+Download the build for your computer from [GitHub Releases](https://github.com/krgkonekpro04-cpu/Nooklet/releases). These alpha builds are unsigned, so your computer may show a first-launch security warning.
 
 ### macOS
 
 1. Download [Nooklet for Mac](https://github.com/krgkonekpro04-cpu/Nooklet/releases/download/v0.2.0-alpha.10/Nooklet-darwin-arm64-0.2.0-alpha.10.zip). This build is for Apple silicon Macs (M1/M2/M3/M4).
 2. In Finder, open Downloads and double-click the ZIP to extract it.
-3. Drag Nooklet.app into Applications.
-4. Try opening Nooklet from Applications. If macOS shows an unidentified-developer warning and offers an Open button, continue only if you trust this download.
-
-If macOS says “Nooklet is damaged and can’t be opened”, or there is no Open Anyway option, stop: this alpha cannot be opened through the normal macOS approval flow. A correctly signed and notarized build is needed. Do not run Terminal commands or disable Gatekeeper.
+3. Drag Nooklet.app into your Applications folder and try opening it.
+4. If macOS says “Nooklet is damaged and can’t be opened,” open Terminal and type xattr -dr com.apple.quarantine followed by a space. Drag Nooklet.app from Finder into the Terminal window, then press Return. This inserts the app’s actual path, so the instruction works whether your Applications folder is inside your home folder or at the top level of your Mac.
+5. Open Nooklet again. This removes the download-quarantine flag from this app; it does not turn off Gatekeeper. Only do this for a copy downloaded from the official Nooklet release page.
 
 ### Windows
 
 1. Download [Nooklet for Windows](https://github.com/krgkonekpro04-cpu/Nooklet/releases/download/v0.2.0-alpha.10/Nooklet-win32-x64-0.2.0-alpha.10.zip). This build is for 64-bit Windows computers.
 2. In File Explorer, open Downloads, right-click the ZIP, and choose Extract All.
 3. Open the extracted Nooklet-win32-x64 folder and double-click Nooklet.exe.
-4. If Microsoft Defender SmartScreen appears, select More info, check that the app is Nooklet, then select Run anyway.
-
-If Windows shows a different security warning or your organization blocks the app, do not bypass it; contact the developer.
-
-These steps are for the unsigned alpha builds. A signed and notarized release will no longer need the first-launch approval on macOS and should show a verified publisher on Windows.
+4. If Microsoft Defender SmartScreen appears, select More info, check that the app is Nooklet, then select Run anyway. If Windows shows a different warning or your organization blocks the app, stop and contact the developer.
 
 ## App updates
 
