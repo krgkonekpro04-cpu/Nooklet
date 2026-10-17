@@ -8,7 +8,7 @@ Download the build for your computer from [GitHub Releases](https://github.com/k
 
 ### macOS
 
-1. Download Nooklet-darwin-arm64-<version>.zip from the release. This build is for Apple silicon Macs (M1/M2/M3/M4).
+1. Download [Nooklet for Mac](https://github.com/krgkonekpro04-cpu/Nooklet/releases/download/v0.2.0-alpha.10/Nooklet-darwin-arm64-0.2.0-alpha.10.zip). This build is for Apple silicon Macs (M1/M2/M3/M4).
 2. In Finder, open Downloads and double-click the ZIP to extract it.
 3. Drag Nooklet.app into Applications.
 4. Control-click Nooklet.app, choose Open, then choose Open again if macOS asks you to confirm. Launch it from Applications afterward.
@@ -17,7 +17,7 @@ If macOS still says Nooklet is damaged or refuses to open it, stop and contact t
 
 ### Windows
 
-1. Download Nooklet-win32-x64-<version>.zip from the release. This build is for 64-bit Windows computers.
+1. Download [Nooklet for Windows](https://github.com/krgkonekpro04-cpu/Nooklet/releases/download/v0.2.0-alpha.10/Nooklet-win32-x64-0.2.0-alpha.10.zip). This build is for 64-bit Windows computers.
 2. In File Explorer, open Downloads, right-click the ZIP, and choose Extract All.
 3. Open the extracted Nooklet-win32-x64 folder and double-click Nooklet.exe.
 4. If Microsoft Defender SmartScreen appears, select More info, check that the app is Nooklet, then select Run anyway.
